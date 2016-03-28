@@ -1,0 +1,177 @@
+body {
+    background: #999 !important;
+}
+
+#main {
+    margin: auto;
+    position: absolute;
+    top: 12%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+}
+
+.friendsContainer {
+    min-width: 605px;
+}
+
+.friendHeader {
+    background: #FF8663;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 20px;
+    color: #fff;
+    padding: 10px;
+}
+
+.searchFilters {
+    background: #F0F0F0;
+    padding: 10px;
+}
+
+.searchFilters input {
+    border-radius: 19px;
+}
+
+.inner-addon {
+    position: relative;
+}
+
+.inner-addon .icon {
+    position: absolute;
+    padding: 10px;
+    pointer-events: none;
+}
+
+.left-addon .icon {
+    left: 14px;
+}
+
+.left-addon input {
+    padding-left: 30px;
+}
+
+.friendsContainer .listHeaders,
+.friendsContainer .listBody {
+    background: #fff;
+}
+
+.listHeaders div {
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 15px;
+    min-width: 282px;
+}
+
+.listHeaders div:first-child {
+    border-right: 1px solid #ccc;
+}
+
+.buttonsArea {
+    background: #F0F0F0;
+    text-align: right;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.listBodies .list-container {
+    height: 300px;
+    overflow: hidden;
+    min-width: 282px;
+}
+
+.listBodies .allContainer {
+    border-right: 1px solid #ccc;
+}
+
+#allFriendsContainer,
+#selectedFriendsContainer {
+    overflow-y: scroll;
+    width: 120%;
+    height: 100%;
+}
+
+.listBodies {
+    padding-bottom: 10px;
+    background: #fff;
+}
+
+#saveResultButton {
+    background: #FF8663;
+    border-radius: 19px;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+}
+
+.friend {
+    padding: 5px 0px;
+    border-bottom: 1px solid #ccc;
+    height: 64px;
+    margin-right: 12%;
+    user-select: none;
+}
+
+.friend:hover {
+    cursor: move;
+    background: #EEE;
+}
+
+.dataInfo {
+    float: left;
+}
+
+.dataInfo span {
+    margin-left: 5px;
+}
+
+.iconInfo {
+    float: right;
+    font-size: 20px;
+    vertical-align: middle;
+    color: #ccc;
+    padding-top: 9px;
+}
+
+.iconInfo:hover {
+    color: #999;
+    cursor: pointer;
+    height: 100%;
+}
+
+.iconInfo i {
+    vertical-align: middle;
+}
+
+[draggable] {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Required to make elements draggable in old WebKit */
+  -khtml-user-drag: element;
+  -webkit-user-drag: element;
+}
+
+.moveClass {
+    opacity: 0.9;
+    background: #eee;
+    border: 1px dotted #ccc;
+}
+
+.img-circle {
+    cursor: default;
+}
+
+#getFriendApp {
+    background: #FF8663;
+    border-radius: 19px;
+    color: #fff;
+    font-weight: bold;
+    outline: none;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+}

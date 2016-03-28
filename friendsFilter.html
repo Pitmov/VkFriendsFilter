@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Friends Filter</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="FriendsFilter.css">
+    <script type="text/javascript" src="//vk.com/js/api/openapi.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="header"></div>
+        <div class="body">
+            <button id="getFriendApp" class="btn" type="button">Получить список друзей</button>
+            <div class="container-fluid friendsContainer hide" id="friendApp">
+                <div class="row friendHeader">
+                    Выберите друзей
+                </div>
+                <div class="row searchFilters">
+                    <div class="col-md-6 inner-addon left-addon">
+                        <i class="icon glyphicon glyphicon-search"></i>
+                        <input type="text" value="" id="yourFriends" class="form-control" placeholder="Начните вводить имя друга" />
+                    </div>
+                    <div class="col-md-6 inner-addon left-addon">
+                        <i class="icon glyphicon glyphicon-search"></i>
+                        <input type="text" value="" id="selectedFriends" class="form-control" placeholder="Начните вводить имя друга" />
+                    </div>
+                </div>
+                <div class="row listHeaders">
+                    <div class="col-md-6">
+                        Ваши друзья
+                    </div>
+                    <div class="col-md-6">
+                        Друзья в списке
+                    </div>
+                </div>
+                <div class="row listBodies">
+                    <div class="col-md-6 list-container allContainer">
+                        <div id="allFriendsContainer">
+                        </div>
+                    </div>
+                    <div class="col-md-6 list-container">
+                        <div id="selectedFriendsContainer">
+                        </div>
+                    </div>
+                </div>
+                <div class="row buttonsArea">
+                    <button id="saveResultButton" class="btn" type="button">Сохранить</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <script type="text/javascript" src="friendsFilter.js"></script>
+        </div>
+        <div id="templates" style="display: none">
+            <script id="friendListTempate" type="x-tmpl-mustache">
+                {{#friends}}
+                <div class="friend" draggable="true" data-user-id="{{userId}}">
+                    <div class="dataInfo"><img class="img-circle" src="{{photo}}" /><span>{{fullName}}</span></div>
+                    <div class="iconInfo"><i data-user-id="{{userId}}" class="addFriend glyphicon glyphicon-plus"></i></div>
+                </div>
+                {{/friends}}
+            </script>
+            <script id="selectedFriendListTempate" type="x-tmpl-mustache">
+                {{#friends}}
+                <div class="friend" draggable="true" data-user-id="{{userId}}">
+                    <div class="dataInfo"><img class="img-circle" src="{{photo}}" /><span>{{fullName}}</span></div>
+                    <div class="iconInfo"><i data-user-id="{{userId}}" class="removeFriend glyphicon glyphicon-remove"></i></div>
+                </div>
+                {{/friends}}
+            </script>
+        </div>
+    </div>
+</body>
